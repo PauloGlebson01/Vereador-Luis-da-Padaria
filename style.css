@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f0f0f0, #e0e0e0);
+    margin: 0;
+}
+
+.card-container {
+    position: relative;
+    width: 380px;
+    max-width: 95%;
+    height: 100vh; /* Preenche toda a tela */
+    border-radius: 20px;
+    overflow: hidden;
+    text-align: center;
+    background: url('./assets/Fachada-da-CMJP-scaled.jpg') center/cover no-repeat;
+    box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribui conteúdo verticalmente */
+    padding: 20px;
+}
+
+/* Overlay para destacar textos */
+.card-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 0;
+}
+
+/* Elementos internos acima do overlay */
+.card-container > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    flex-direction: column;
+}
+
+/* Foto do parlamentar - círculo */
+.profile-img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #004080;
+    margin-bottom: 15px;
+}
+
+
+/* Nome e partido */
+.profile-name, .party-name {
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffd700; /* destaque dourado opcional */
+    margin-bottom: 8px;
+}
+
+/* Links úteis e contatos */
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.links a {
+    display: block;
+    text-decoration: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.links a i {
+    margin-right: 6px;
+}
+
+.links a:hover {
+    transform: scale(1.05);
+}
+
+/* WhatsApp */
+.links a[href*="whatsapp"] {
+    background: #25d366;
+    color: #fff;
+}
+
+.links a[href*="whatsapp"]:hover {
+    background: #1da851;
+}
+
+/* Página oficial */
+.links a[href*="leg.br"] {
+    background: #444;
+    color: #fff;
+}
+
+.links a[href*="leg.br"]:hover {
+    background: #222;
+}
+
+/* Instagram */
+.links a[href*="instagram"] {
+    background: #E1306C;
+    color: #fff;
+}
+
+.links a[href*="instagram"]:hover {
+    background: #C13584;
+}
+
+/* Facebook */
+.links a[href*="facebook"] {
+    background: #1877F2;
+    color: #fff;
+}
+
+.links a[href*="facebook"]:hover {
+    background: #145DBF;
+}
+
+/* Botão Requerimento */
+.btn-requerimento {
+    background: #0066cc;
+    color: #fff;
+}
+
+.btn-requerimento:hover {
+    background: #004999;
+}
+
+/* Footer fixo na parte inferior */
+footer {
+    font-size: 12px;
+    color: #ccc;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Responsivo para Mobile */
+@media (max-width: 500px) {
+    .card-container {
+        width: 95%;
+        height: 100vh;
+        padding: 15px;
+    }
+
+    .profile-img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .profile-name, .party-name {
+        font-size: 14px;
+    }
+
+    .links a {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .social-links a {
+        font-size: 20px;
+    }
+}
