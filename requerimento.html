@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário de Requerimento Oficial</title>
+  <link rel="stylesheet" href="requerimento.css">
+</head>
+<body>
+  <div class="form-container">
+    <!-- Cabeçalho Oficial -->
+    <div class="header">
+      <img src="./assets/logo-pmjp-color-horizontal.png" alt="Logo do Órgão" class="logo">
+      <div class="org-info">
+        <h1>Prefeitura Municipal de João Pessoa</h1>
+        <h2>Gabinete Oficial de Solicitação de Requerimentos</h2>
+      </div>
+    </div>
+
+    <h2 class="form-title">Formulário de Solicitação de Requerimento</h2>
+    
+    <form id="formRequerimento" accept-charset="UTF-8">
+      <div class="form-group">
+        <label for="nome">Nome Completo</label>
+        <input type="text" id="nome" name="nome" required>
+      </div>
+
+      <div class="form-group">
+        <label for="documento">Documento (RG/CPF)</label>
+        <input type="text" id="documento" name="documento" required>
+      </div>
+
+      <div class="form-group">
+        <label for="endereco">Endereço</label>
+        <input type="text" id="endereco" name="endereco" required>
+      </div>
+
+      <div class="form-group">
+        <label for="telefone">Telefone</label>
+        <input type="tel" id="telefone" name="telefone" placeholder="(DDD) 00000-0000" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email">
+      </div>
+
+      <div class="form-group">
+        <label for="descricao">Descrição do Pedido</label>
+        <textarea id="descricao" name="descricao" required></textarea>
+      </div>
+
+      <div class="form-actions">
+        <button type="reset" class="btn-reset">Limpar</button>
+        <button type="submit" class="btn-submit">Gerar PDF / Enviar WhatsApp</button>
+      </div>
+    </form>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="requerimento.js"></script>
+</body>
+</html>

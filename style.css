@@ -1,0 +1,246 @@
+/* Reset e estilo base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f0f0f0, #e0e0e0);
+  margin: 0;
+}
+
+/* Card principal */
+.card-container {
+  position: relative;
+  width: 380px;
+  max-width: 95%;
+  height: 100vh; /* Ocupa toda a altura da tela */
+  border-radius: 20px;
+  overflow: hidden;
+  text-align: center;
+  background: url("./assets/Fachada-da-CMJP-scaled.jpg") center/cover no-repeat;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Overlay escura para destacar textos */
+.card-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 0;
+}
+
+/* Mantém o conteúdo acima do overlay */
+.card-container > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Cabeçalho */
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.profile-img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #004080;
+  margin-bottom: 10px;
+
+  transition: all 0.35s ease;
+}
+
+.profile-img:hover {
+  transform: scale(1.1);
+  box-shadow: 
+    0 0 0 4px rgba(0, 64, 128, 0.3),
+    0 12px 30px #ffd90080;
+}
+
+/* Nome e partido */
+.profile-name,
+.party-name {
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffd700;
+  margin-bottom: 5px;
+}
+
+/* Links e botões */
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 15px;
+  width: 100%;
+  align-items: center;
+}
+
+.links a {
+  display: block;
+  width: 85%;
+  text-decoration: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 15px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.links a i {
+  margin-right: 6px;
+}
+
+.links a:hover {
+  transform: scale(1.05);
+}
+
+/* Cores dos botões */
+.links a[href*="whatsapp"] {
+  background: #25d366;
+  color: #fff;
+}
+
+.links a[href*="whatsapp"]:hover {
+  background: #1da851;
+}
+
+.links a[href*="leg.br"] {
+  background: #444;
+  color: #fff;
+}
+
+.links a[href*="leg.br"]:hover {
+  background: #222;
+}
+
+.links a[href*="instagram"] {
+  background: #e1306c;
+  color: #fff;
+}
+
+.links a[href*="instagram"]:hover {
+  background: #c13584;
+}
+
+.links a[href*="facebook"] {
+  background: #1877f2;
+  color: #fff;
+}
+
+.links a[href*="facebook"]:hover {
+  background: #145dbf;
+}
+
+.btn-requerimento {
+  background: #0066cc;
+  color: #fff;
+}
+
+.btn-requerimento:hover {
+  background: #004999;
+}
+
+/* Rodapé */
+footer {
+  font-size: 12px;
+  color: #ccc;
+  text-align: center;
+  margin-top: 15px;
+}
+
+/* ======= MODO MOBILE ========= */
+@media (max-width: 500px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: #000; /* Fundo neutro atrás da imagem */
+  }
+
+  .card-container {
+    width: 100%;
+    height: 100vh; /* Agora ocupa toda a tela no mobile */
+    border-radius: 0; /* Remove cantos arredondados para ocupar tudo */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    text-align: center;
+    gap: 15px;
+    background: url("./assets/Fachada-da-CMJP-scaled.jpg") center/cover
+      no-repeat fixed;
+    box-shadow: none;
+    color: #fff;
+    position: relative;
+    padding: 25px;
+  }
+
+  .card-container::before {
+    background: rgba(0, 0, 0, 0.55); /* Escurece mais para melhor leitura */
+  }
+
+  .profile-img {
+    width: 100px;
+    height: 100px;
+    border: 3px solid #004080;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 8px;
+  }
+
+  .profile-name,
+  .party-name {
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+
+  .links {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .links a {
+    width: 90%;
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 8px;
+  }
+
+  footer {
+    font-size: 11px;
+    color: #ccc;
+    margin-top: 15px;
+  }
+}
