@@ -41,12 +41,9 @@ O projeto foi desenvolvido com o propósito de fortalecer a presença digital do
 
 Mais do que um cartão digital, é uma ferramenta de transparência, acessibilidade e comunicação com a comunidade.
 
-
-## 🚀 Como Visualizar o Projeto
-
-1. **Clone este repositório**
-   ```bash
-   git clone (https://pauloglebson01.github.io/Vereador-Luis-da-Padaria/)
+Paulo Glebson
+💼 Softpower Soluções Digitais
+🌐 Cartões Digitais Profissionais
 
    
 
